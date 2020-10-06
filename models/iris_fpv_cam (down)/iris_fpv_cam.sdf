@@ -6,10 +6,10 @@
       <uri>model://iris</uri>
     </include>
     
-    <!-- 前置深度相机 -->
+    <!-- 下置深度相机 -->
     <include>
       <uri>model://kinect_self</uri>
-      <pose>0.1 0 0 0 0 0</pose>
+      <pose>0.1 0 0 0 1.57 0</pose>
     </include>
     <joint name="kinect_joint" type="fixed">
       <child>kinect_self::link</child>
