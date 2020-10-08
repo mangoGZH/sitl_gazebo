@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <model name="kinect_self">
-    <pose>-2 2.5 1 0 0 0</pose>
+    <pose>0 0 0 0 0 0</pose>
     <link name="link">
       <inertial>
         <mass>0.01</mass>
@@ -27,6 +27,7 @@
         </geometry>
       </visual>
       <sensor type="depth" name="camera">
+
       <always_on>true</always_on>
       <update_rate>30.0</update_rate>
       <camera>
@@ -38,7 +39,7 @@
         </image>
         <clip>
           <near>0.4</near>
-          <far>16.0</far>
+          <far>200.0</far>
         </clip>
       </camera>
       <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
@@ -55,16 +56,16 @@
         <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
         <frameName>camera_link</frameName>
         <pointCloudCutoff>0.5</pointCloudCutoff>
-        <pointCloudCutoffMax>20.0</pointCloudCutoffMax>
+        <pointCloudCutoffMax>200.0</pointCloudCutoffMax>
         <distortionK1>0</distortionK1>
         <distortionK2>0</distortionK2>
         <distortionK3>0</distortionK3>
         <distortionT1>0</distortionT1>
         <distortionT2>0</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0</Cx>
-        <Cy>0</Cy>
-        <focalLength>0</focalLength>
+        <Cx>320</Cx>
+        <Cy>240</Cy>
+        <focalLength>450</focalLength>
         <hackBaseline>0</hackBaseline>
       </plugin>
     </sensor>
