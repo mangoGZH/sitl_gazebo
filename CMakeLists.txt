@@ -132,7 +132,7 @@ foreach(ITR ${GAZEBO_INCLUDE_DIRS})
     set(GAZEBO_MSG_INCLUDE_DIRS "${ITR}/gazebo/msgs")
   endif()
 endforeach()
-
+set(EIGEN3_INCLUDE_DIRS "/usr/include/eigen3")
 include_directories(
   include
   ${Boost_INCLUDE_DIR}
